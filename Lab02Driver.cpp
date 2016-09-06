@@ -19,7 +19,7 @@ int main()
    rf->close();
    wf->close();
    delete rf;
-   delete wf;
+   //delete wf;
 
    return 0;
 }

@@ -12,16 +12,16 @@ ReadFile::ReadFile(const char* file_name)
 
 ReadFile::~ReadFile()
 {
-   close(rf);
-   delete rf;
+   input_file.close();
+   //delete input_file;
 }
 
-ReadFile::bool eof()
+bool ReadFile::eof()
 {
    return _eof;
 }
 
-ReadFile::close()
+void ReadFile::close()
 {
    if (!closed)
    {
@@ -30,7 +30,7 @@ ReadFile::close()
    }
 }
 
-ReadFile::readLine()
+String* ReadFile::readLine()
 {
    if (closed) return NULL;
    if (_eof) return NULL;

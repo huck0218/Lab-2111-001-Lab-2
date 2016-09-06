@@ -8,8 +8,7 @@ WriteFile::WriteFile(const char* file_name)
 }
  
  WriteFile::~WriteFile(){
-	 output_file.close();
-	 closed = true;
+
  }
  
  void WriteFile::writeLine(String* line){
@@ -19,4 +18,7 @@ WriteFile::WriteFile(const char* file_name)
 	 }
  }
  
- 
+ void WriteFile::close(){
+	 output_file.close();
+	 closed = true;
+ }

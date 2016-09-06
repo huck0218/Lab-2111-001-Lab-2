@@ -17,7 +17,7 @@ class WriteFile
 		//destructor
 		~WriteFile();
 		void writeLine(String* line);
-		
+		void close();
 		
 		
 };
