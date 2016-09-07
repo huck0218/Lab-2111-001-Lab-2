@@ -9,6 +9,7 @@ using namespace std;
 class WriteFile
 {
 	private:
+		//member variables
 	   ofstream output_file;
 	   bool closed;
 	public:
@@ -16,6 +17,7 @@ class WriteFile
 		WriteFile(const char* file_name);
 		//destructor
 		~WriteFile();
+		//member functions
 		void writeLine(String* line);
 		void close();
 		
